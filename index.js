@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-var uri = 'mongodb+srv://dbUser:dbPassword@cluster0.4kvdu.mongodb.net/test'
+var uri = 'mongodb+srv://dbUser:dbPassword@cluster0.4kvdu.mongodb.net/place'
 mongoose.connect(uri);
 
 var db = mongoose.connection;
