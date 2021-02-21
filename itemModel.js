@@ -12,7 +12,11 @@ var itemSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    poster_id : String,
+    poster_email : {
+        type: String,
+        required: true
+    },
+    condition : String,
     create_date: {
         type: Date,
         default: Date.now

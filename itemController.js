@@ -24,7 +24,8 @@ exports.new = function (req, res) {
     item.price = req.body.price;
     item.image_url = req.body.image_url;
     item.description = req.body.description;
-    item.poster_id = req.body.poster_id;
+    item.poster_email = req.body.poster_email;
+    item.condition = req.body.condition;
     item.updated_date = req.body.updated_date;
 
 // save the item and check for errors
@@ -59,7 +60,8 @@ exports.update = function (req, res) {
         item.price = req.body.price;
         item.image_url = req.body.image_url;
         item.description = req.body.description;
-        item.poster_id = req.body.poster_id;
+        item.poster_email = req.body.poster_email;
+        item.condition = req.body.condition;
         item.updated_date = req.body.updated_date;
 // save the item and check for errors
         item.save(function (err) {
