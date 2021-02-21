@@ -6,7 +6,8 @@ let bodyParser = require('body-parser');
 // Import Mongoose
 let mongoose = require('mongoose');
 // Initialize the app
-let app = express(); app.use(cors());
+let app = express(); 
+app.use(cors());
 
 // Import routes
 let apiRoutes = require("./api-routes");
@@ -18,6 +19,8 @@ app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
 var uri = 'mongodb+srv://dbUser:dbPassword@cluster0.4kvdu.mongodb.net/place'
 mongoose.connect(uri);
+app.use(cors());
+
 
 var db = mongoose.connection;
 
